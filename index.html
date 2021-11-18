@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übungen 18.11.</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <section>
+
+
+        <h1>
+            Mehrwertsteuer-Rechner
+        </h1>
+
+
+
+        <form action="" onsubmit="return false">
+
+            <h2>Was soll berechnet werden?</h2>
+            <div>
+                <input type="radio" name="mWSt" id="mWStAufschlagen" onclick="checkMWST()">
+                <label for="">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+            </div>
+
+            <div>
+                <input type="radio" name="mWSt" id="mWStAbziehen" onclick="checkMWST()">
+                <label for="">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+            </div>
+
+            <h2>Mehrwertsteuersatz</h2>
+            <div>
+                <input type="radio" name="prozent" id="neunzehn" onclick="checkMWS()">
+                <label for="">19 %</label>
+            </div>
+
+            <div>
+                <input type="radio" name="prozent" id="sieben" onclick="checkMWS()">
+                <label for="">7 %</label>
+            </div>
+
+
+            <h2>Welchen Betrag möchten Sie umrechnen? </h2>
+
+            <p id="ergebAbfrage1"></p>
+
+            <div>
+                <input type="text" required placeholder="10,00" id="betrag">
+            </div>
+
+
+
+
+
+            <div>
+                <input class="btn" type="submit" value="Berechnen" onclick="berechnen()">
+            </div>
+        </form>
+
+        <h2>Ergebnis</h2>
+        <div>
+            <p>Mehrwertsteuerbetrag</p>
+            <p id="ergebnis1"></p>
+        </div>
+
+        <div>
+            <p id="unten">Betrag</p>
+            <p id="ergebnis2"></p>
+        </div>
+
+
+    </section>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
